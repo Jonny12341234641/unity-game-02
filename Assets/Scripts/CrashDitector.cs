@@ -6,11 +6,13 @@ using UnityEngine.SceneManagement;
 public class CrashDitector : MonoBehaviour
 {
     [SerializeField] float restartDelay = 1f;
+    [SerializeField] ParticleSystem crashParticles;
     void OnTriggerEnter2D(Collider2D collision)
     {
         int layerIndex = LayerMask.NameToLayer("Floor"); // Assuming "Obstacle" is the name of the obstacle layer
         if (collision.gameObject.layer == layerIndex) 
         {
+            crashParticles.Play();
             Debug.Log("Crash Detected");
             Invoke("ReloadScene", restartDelay);
         }
