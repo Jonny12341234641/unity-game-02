@@ -496,6 +496,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PowerUpManager
   powerUps:
   - {fileID: 11400000, guid: a2e6850a49ea9b24daa36da586c8f5d6, type: 2}
+  - {fileID: 11400000, guid: f3babccc66f6a534ab3d7b174590d133, type: 2}
 --- !u!212 &236489860
 SpriteRenderer:
   serializedVersion: 2
