@@ -10,10 +10,10 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float boostSpeed = 20f;
 
     [SerializeField] ParticleSystem powerupPartcles;
+    [SerializeField] ScoreManager scoreManager;
     InputAction moveAction;
     Rigidbody2D myRigidbody2D;
     SurfaceEffector2D surfaceEffector2D;
-    ScoreManager scoreManager;
 
     Vector2 moveVector;
     bool canControlPlayer = true;
@@ -21,13 +21,14 @@ public class PlayerController : MonoBehaviour
     float totalRotation;
     int activePowerupCount;
 
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         moveAction = InputSystem.actions.FindAction("Move");
         myRigidbody2D = GetComponent<Rigidbody2D>();
         surfaceEffector2D = FindFirstObjectByType<SurfaceEffector2D>();
-        scoreManager = FindFirstObjectByType<ScoreManager>();
+        //scoreManager = FindFirstObjectByType<ScoreManager>();
 
     }
 
